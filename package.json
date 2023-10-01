@@ -18,6 +18,7 @@
   },
   "scripts": {
     "start": "react-scripts start",
+    "dev": "PORT=2023 react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject"
@@ -39,5 +40,9 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
+  },
+  "devDependencies": {
+    "@types/is-empty": "^1.2.1",
+    "tailwindcss": "^3.3.3"
   }
 }
