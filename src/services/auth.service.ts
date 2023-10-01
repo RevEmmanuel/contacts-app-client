@@ -38,7 +38,7 @@ class AuthService {
 
   getUserDetails(): Promise<IUser> {
     return new Promise<IUser>((resolve, reject) => {
-      apiInstance.get("/current-user")
+      apiInstance.get("/auth/current-user")
         .then((res: AxiosResponse<IUser>) => {
           resolve(res.data);
         })

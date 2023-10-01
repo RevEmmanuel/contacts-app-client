@@ -5,7 +5,7 @@ import {AxiosResponse} from "axios";
 class ContactService {
   createContact(data: IContact): Promise<IContact> {
     return new Promise((resolve, reject) => {
-      apiInstance.post("/contact/create", data)
+      apiInstance.post("/contacts/create", data)
         .then((res: AxiosResponse<IContact>) => {
           resolve(res.data)
         })
@@ -15,7 +15,7 @@ class ContactService {
 
   updateContact(data: IContact): Promise<IContact> {
     return new Promise((resolve, reject) => {
-      apiInstance.put(`/contact/${data.id}`, data)
+      apiInstance.put(`/contacts/${data.id}`, data)
         .then((res: AxiosResponse<IContact>) => {
           resolve(res.data)
         })
@@ -25,7 +25,7 @@ class ContactService {
 
   getContact(id: number): Promise<IContact> {
     return new Promise((resolve, reject) => {
-      apiInstance.post(`/contact/${id}`)
+      apiInstance.get(`/contacts/${id}`)
         .then((res: AxiosResponse<IContact>) => {
           resolve(res.data)
         })
@@ -35,7 +35,7 @@ class ContactService {
 
   getAllContact(): Promise<{ count: number, rows: IContact[] }> {
     return new Promise((resolve, reject) => {
-      apiInstance.post(`/contact/all`)
+      apiInstance.get(`/contacts/all`)
         .then((res: AxiosResponse<{ count: number, rows: IContact[] }>) => {
           resolve(res.data)
         })
@@ -46,7 +46,7 @@ class ContactService {
   deleteContact(id: number): Promise<boolean> {
     return new Promise((resolve, reject) => {
       if (window.confirm("Are you sure you want to delete?")) {
-        apiInstance.delete(`/contact/${id}`)
+        apiInstance.delete(`/contacts/${id}`)
           .then((res) => {
             resolve(true)
           })
