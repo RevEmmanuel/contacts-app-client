@@ -34,9 +34,17 @@ function HomePage(props: IProps) {
                   <h6 className="text-red-500">A error occurred</h6>
                 </div>
               ) :
-              data?.rows.map((contact, index) => (
-                <ContactListItem key={`contact-${contact.id}`} data={contact}/>
-              ))
+              data?.count === 0 ? (
+                  <div className="h-80 flex items-center justify-center flex-col px-5 py-8">
+                    <h6 className="text-muted">You have no contacts created</h6>
+                    <Link to="/contact/new">
+                      <Button variant="PRIMARY"><IconPlus/> Create new contact</Button>
+                    </Link>
+                  </div>
+                ) :
+                data?.rows.map((contact, index) => (
+                  <ContactListItem key={`contact-${contact.id}`} data={contact}/>
+                ))
         }
       </div>
     </Container>
