@@ -1,12 +1,12 @@
 import {configureStore} from '@reduxjs/toolkit'
-import storageSession from 'redux-persist/lib/storage/session'
+import storage from 'redux-persist/lib/storage'
 import {encryptTransform} from "redux-persist-transform-encrypt";
 import {persistReducer, persistStore} from "redux-persist";
 import rootReducer from "./slices";
 
 const persistConfig = {
   key: "root",
-  storage: storageSession,
+  storage,
   transforms: [
     encryptTransform({
       secretKey: process.env.REACT_APP_REDUX_SECRET_KEY as string,
