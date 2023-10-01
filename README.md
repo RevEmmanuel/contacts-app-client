@@ -1,3 +1,25 @@
+# Hux Ventures Frontend Assessment
+This is a React.js project that allows users to perform CRUD operations on contacts.
+
+
+### Prerequisites:
+* `Node.js`
+* `npm`
+* `Port 3000 open and free`
+
+## Usage
+- Install [Node.js](https://nodejs.org/en/)
+```
+npm install --global yarn
+```
+
+To use this project, you will need to have Node.js and NPM installed. Once you have installed Node.js and NPM, you can clone this repository and install the dependencies with the following commands:
+```
+git clone https://github.com/RevEmmanuel/hux-assessment-frontend.git
+cd hux-assessment-frontend
+yarn
+```
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
@@ -38,6 +60,26 @@ If you aren’t satisfied with the build tool and configuration choices, you can
 Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
 
 You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+
+## Deployment
+To deploy the project to production, you can use a service such as Heroku or AWS Elastic Beanstalk or Railway.
+This project is currently hosted on vercel.
+
+## Documentation
+[Deployed Website URL](https://hux-assessment-frontend.vercel.app/)
+[Backend GitHub Repository](https://github.com/RevEmmanuel/hux-assessment-backend)
+
+## Developer & Engineer
+Adeola Adekunle
+* [GitHub (RevEmmanuel)](https://github.com/RevEmmanuel)
+* [Twitter (@Adeola_Ade1)](https://twitter.com/Adeola_Ade1)
+* [Instagram (@deolaaxo)](https://www.instagram.com/deolaaxo/)
+* [LinkedIn (Adeola Adekunle)](https://www.linkedin.com/in/adeola-adekunle-emmanuel/)
+* [Email(Adeola Adekunle)](mailto:adeolaae1@gmail.com)
+
+## Contributing
+If you would like to contribute to this project, please feel free to fork the repository and submit a pull request.
+
 
 ## Learn More
 
