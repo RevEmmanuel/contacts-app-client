@@ -5,6 +5,7 @@ import {Provider} from "react-redux";
 import {PersistGate} from "redux-persist/integration/react";
 import {QueryClient, QueryClientProvider} from "react-query";
 import authService from "./services/auth.service";
+import {Toaster} from "react-hot-toast";
 
 interface IProps {
 }
@@ -20,6 +21,10 @@ function App(props: IProps) {
         persistor={persistor}>
         <QueryClientProvider client={queryClient}>
           <RootNavigation/>
+          <Toaster toastOptions={{
+            position: "bottom-left",
+            duration: 10_000,
+          }}/>
         </QueryClientProvider>
       </PersistGate>
     </Provider>

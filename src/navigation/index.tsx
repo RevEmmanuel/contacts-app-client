@@ -1,5 +1,5 @@
 import React from 'react';
-import {BrowserRouter, Route, Routes} from "react-router-dom";
+import {BrowserRouter, Outlet, Route, Routes} from "react-router-dom";
 import {useAppSelector} from "../redux/hooks";
 import LandingPage from "../pages/landing";
 import HomePage from "../pages/home";
@@ -10,6 +10,7 @@ import EditContactPage from "../pages/editContact";
 import CreateContactPage from "../pages/createContact";
 import LoginPage from "../pages/login";
 import RegisterPage from "../pages/register";
+import Unprotected from "./Unprotected";
 
 interface IProps {
 }
@@ -33,8 +34,10 @@ function RootNavigation(props: IProps) {
           <Route path="contact/:id/edit" element={<EditContactPage/>}/>
         </Route>
 
-        <Route path="login" element={<LoginPage/>}/>
-        <Route path="register" element={<RegisterPage/>}/>
+        <Route element={<Unprotected><Outlet/></Unprotected>}>
+          <Route path="login" element={<LoginPage/>}/>
+          <Route path="register" element={<RegisterPage/>}/>
+        </Route>
       </Routes>
     </BrowserRouter>
   );
