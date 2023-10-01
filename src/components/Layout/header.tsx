@@ -4,6 +4,7 @@ import {useQuery} from "react-query";
 import {IUser} from "../../types/auth";
 import Button from "../Button";
 import authService from "../../services/auth.service";
+import {Link} from "react-router-dom";
 
 interface IProps {
 }
@@ -14,6 +15,11 @@ function Header(props: IProps) {
   return (
     <div className="w-full bg-white border-b border-slate-200 shadow-xl">
       <Container className="flex items-stretch h-16">
+        <div>
+          <Link to="/" className="h-full flex items-center px-3">
+            Home
+          </Link>
+        </div>
         <div className="ml-auto">
           <div className="flex items-center h-full">
             <p>Welcome {data?.username}</p>
@@ -21,9 +27,11 @@ function Header(props: IProps) {
         </div>
 
         <div>
-          <Button variant="DANGER" size="SMALL" onClick={authService.logout}>
-            Logout
-          </Button>
+          <div className="h-full flex items-center">
+            <Button variant="DANGER" size="SMALL" onClick={authService.logout}>
+              Logout
+            </Button>
+          </div>
         </div>
       </Container>
     </div>
