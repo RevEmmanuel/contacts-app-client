@@ -11,7 +11,7 @@ class AuthService {
 
   async reAuthenticate(){
     try {
-      const token = store.getState().auth?.token?.token;
+      const token = store.getState().auth?.token;
       if (!isEmpty(token)) {
         setAuthToken(token);
         // await this.init();
