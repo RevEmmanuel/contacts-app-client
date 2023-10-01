@@ -10,8 +10,8 @@ class AuthService {
     return new Promise<boolean>((resolve, reject) => {
       apiInstance.post("/auth/login", data)
         .then((res: AxiosResponse<{ token: string }>) => {
-          const token = res.data.token
-          store.dispatch(authActions.login(`Bearer ${token}`));
+          const token = `Bearer ${res.data.token}`;
+          store.dispatch(authActions.login(token));
           setAuthToken(token);
           resolve(true);
         })
@@ -27,8 +27,8 @@ class AuthService {
             token: string
           }
         }>) => {
-          const token = res.data.createdUser.token
-          store.dispatch(authActions.login(`Bearer ${token}`));
+          const token = `Bearer ${res.data.createdUser.token}`
+          store.dispatch(authActions.login(token));
           setAuthToken(token);
           resolve(true);
         })
