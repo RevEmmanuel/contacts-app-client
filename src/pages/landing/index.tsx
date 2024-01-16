@@ -40,9 +40,14 @@ function LandingPage(props: IProps) {
                     <p className="text-gray-700 mb-4">
                         The Contacts web application is free and easy to use. Sign up for an account today and start managing your contacts!
                     </p>
-                    <Link to="/login">
+                    <div className="flex flex-row">
+                    <Link to="/login" className="mr-2">
                         <Button className="bg-blue-600 hover:bg-blue-700 text-white">Login</Button>
                     </Link>
+                    <Link to="/register">
+                        <Button className="bg-blue-600 hover:bg-blue-700 text-white">Signup</Button>
+                    </Link>
+                    </div>
                 </section>
             </main>
             <footer className="text-center py-4 text-gray-500">
