@@ -48,8 +48,8 @@ function LoginPage(props: IProps) {
               <Field name="email">
                 {({field, meta}: FieldProps) => (
                   <TextInput
-                    label="Username"
-                    placeholder="Username"
+                    label="Email address"
+                    placeholder="Email address"
                     error={meta.touched && meta.error ? meta.error : ""}
                     {...field}
                   />
